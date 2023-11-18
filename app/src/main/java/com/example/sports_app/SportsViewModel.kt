@@ -3,8 +3,8 @@ package com.example.sports_app
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.android.sports.data.SportsData
-import com.example.android.sports.model.Sport
+import com.example.sports_app.data.SportsData
+import com.example.sports_app.model.Sport
 
 class SportsViewModel : ViewModel() {
 

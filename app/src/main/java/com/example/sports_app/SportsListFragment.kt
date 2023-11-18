@@ -8,7 +8,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.slidingpanelayout.widget.SlidingPaneLayout
-import com.example.android.sports.databinding.FragmentSportsListBinding
+import com.example.sports_app.databinding.FragmentSportsListBinding
+import com.example.sports_app.model.Sport
 
 class SportsListFragment : Fragment() {
 
@@ -36,7 +37,7 @@ class SportsListFragment : Fragment() {
             binding.slidingPaneLayout.openPane()
         }
         binding.recyclerView.adapter = adapter
-        adapter.submitList(sportsViewModel.sportsData)
+        adapter.submitList(sportsViewModel.sportsData as List<Sport>?)
     }
 }
 

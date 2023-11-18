@@ -1,4 +1,5 @@
 package com.example.sports_app
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.android.sports.databinding.SportsListItemBinding
-import com.example.android.sports.model.Sport
+import com.example.sports_app.databinding.SportsListItemBinding
+import com.example.sports_app.model.Sport
 
 class SportsAdapter(private val onItemClicked: (Sport) -> Unit) :
     ListAdapter<Sport, SportsAdapter.SportsViewHolder>(DiffCallback) {
@@ -17,7 +18,7 @@ class SportsAdapter(private val onItemClicked: (Sport) -> Unit) :
     class SportsViewHolder(private var binding: SportsListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(sport: Sport, context:Context) {
+        fun bind(sport: Sport, context: Context) {
             binding.title.text = context.getString(sport.titleResourceId)
             binding.subTitle.text = context.getString(sport.subTitleResourceId)
             binding.sportsImage.load(sport.imageResourceId)
